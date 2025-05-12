@@ -303,6 +303,8 @@ em {
 .al_index_post_excerpt {
   color: #555;
   line-height: 30px;
+  text-align: justify;
+  hyphens: auto;
 }
 .al_index_footer {
   color: #aaa;
@@ -585,6 +587,40 @@ ol li::before {
   display: inline-block;
   min-width: 1em;
   margin-right: 0.5em;
+}
+.al_main_page_container {
+  font-size: 15px;
+  text-align: justify;
+}
+.al_main_page_container img,
+.al_main_page_container video {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  display: block;
+  margin: auto;
+  cursor: zoom-in;
+}
+.al_main_page_container a {
+  color: #82318e;
+}
+.al_main_page_container q,
+.al_main_page_container blockquote {
+  quotes: none;
+}
+.al_main_page_container q::before,
+.al_main_page_container blockquote::before,
+.al_main_page_container q::after,
+.al_main_page_container blockquote::after {
+  content: "";
+  content: none;
+}
+.al_main_page_container p,
+.al_main_page_container figure {
+  margin-bottom: 1.57143em;
+  hyphens: auto;
+  line-height: 25px;
+  text-align: justify;
 }
 .al_sidebar_cnt {
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
