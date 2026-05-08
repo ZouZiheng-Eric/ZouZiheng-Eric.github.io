@@ -296,7 +296,19 @@ em {
   background-position: 50% 50%;
   will-change: transform, opacity;
   opacity: 0.88;
+  animation: al_stars_twinkling 8s ease-in-out infinite alternate, al_stars_drift_a 40s linear infinite;
+}
+.al_main_container.al_stars_motion_subtle::before {
+  animation: al_stars_twinkling 10s ease-in-out infinite alternate, al_stars_drift_a 64s linear infinite;
+  opacity: 0.78;
+}
+.al_main_container.al_stars_motion_strong::before {
   animation: al_stars_twinkling 6s ease-in-out infinite alternate, al_stars_drift_a 22s linear infinite;
+  opacity: 0.88;
+}
+.al_main_container.al_stars_motion_off::before {
+  animation: none;
+  opacity: 0.74;
 }
 .al_main_container::after {
   content: none;
