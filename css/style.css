@@ -293,8 +293,9 @@ em {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: 0 0;
+  will-change: background-position, opacity;
   opacity: 0.88;
-  animation: al_stars_twinkling 11s ease-in-out infinite alternate, al_stars_drift_a 90s linear infinite;
+  animation: al_stars_twinkling 9s ease-in-out infinite alternate, al_stars_drift_a 38s linear infinite;
 }
 .al_main_container::after {
   content: none;
@@ -396,7 +397,7 @@ em {
     background-position: 0 0;
   }
   100% {
-    background-position: 12% 12%;
+    background-position: 20% 14%;
   }
 }
 @-webkit-keyframes al_stars_drift_a {
@@ -404,7 +405,7 @@ em {
     background-position: 0 0;
   }
   100% {
-    background-position: 12% 12%;
+    background-position: 20% 14%;
   }
 }
 @-o-keyframes al_stars_drift_a {
@@ -412,7 +413,7 @@ em {
     background-position: 0 0;
   }
   100% {
-    background-position: 12% 12%;
+    background-position: 20% 14%;
   }
 }
 @keyframes al_stars_drift_a {
@@ -420,7 +421,7 @@ em {
     background-position: 0 0;
   }
   100% {
-    background-position: 12% 12%;
+    background-position: 20% 14%;
   }
 }
 .al_index_container {
