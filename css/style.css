@@ -185,50 +185,55 @@ em {
   z-index: 12;
   width: calc(100vw - 64px);
   max-width: 980px;
-  padding: 0 clamp(84px, 10vw, 160px) 0 4px;
+  padding: 0 4px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: clamp(10px, 2.6vw, 36px);
+  align-items: start;
   text-align: left;
   color: #f6f8fb;
 }
 .al_index_hero_title {
   margin: 0;
   max-width: 100%;
-  font-size: clamp(62px, 11vw, 176px);
+  font-size: clamp(56px, 10vw, 158px);
   font-weight: 700;
   line-height: 0.84;
   letter-spacing: 0.01em;
   text-transform: uppercase;
 }
 .al_index_hero_cn {
-  position: absolute;
-  top: 2px;
-  right: 0;
-  margin: 0;
+  position: relative;
+  top: 0;
+  right: auto;
+  margin: clamp(8px, 1.2vw, 18px) 0 0;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", serif;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Source Han Sans SC", sans-serif;
   font-weight: 700;
-  font-size: clamp(40px, 4.4vw, 64px);
+  font-size: clamp(38px, 4.2vw, 64px);
   letter-spacing: 0.12em;
   line-height: 1.06;
   color: rgba(248,250,255,0.96);
   text-shadow: 0 0 26px rgba(246,248,251,0.24), 0 0 2px rgba(246,248,251,0.6);
   transform: translateY(0);
   z-index: 2;
+  justify-self: end;
 }
 .al_index_hero_cn span {
   transition: transform 0.6s ease, opacity 0.6s ease, text-shadow 0.6s ease;
 }
 .al_index_hero_cn span:first-child {
-  transform: translateY(18px) rotate(-1.2deg);
+  transform: translateY(24px) rotate(-1.8deg);
 }
 .al_index_hero_cn span:last-child {
   opacity: 0.96;
   color: rgba(214,178,255,0.98);
   font-weight: 700;
-  transform: translateY(-10px) rotate(1deg);
+  transform: translateY(-16px) rotate(1.6deg);
   text-shadow: 0 0 24px rgba(214,178,255,0.3), 0 0 2px rgba(214,178,255,0.72);
 }
 .al_index_hero_meta {
@@ -239,6 +244,14 @@ em {
   text-transform: none;
   color: rgba(246,248,251,0.82);
 }
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .al_index_hero_cn {
+    margin-top: clamp(10px, 1.6vw, 20px);
+    font-size: clamp(34px, 3.7vw, 48px);
+    gap: 12px;
+    letter-spacing: 0.1em;
+  }
+}
 @media screen and (max-width: 768px) {
   .al_index_background_letter {
     font-size: clamp(220px, 58vw, 420px);
@@ -246,7 +259,7 @@ em {
   }
   .al_index_hero {
     width: calc(100vw - 36px);
-    padding-right: 4px;
+    display: block;
   }
   .al_index_hero_cn {
     position: static;
