@@ -185,12 +185,13 @@ em {
   z-index: 12;
   width: calc(100vw - 64px);
   max-width: 980px;
-  padding: 0 4px;
+  padding: 0 clamp(84px, 10vw, 160px) 0 4px;
   text-align: left;
   color: #f6f8fb;
 }
 .al_index_hero_title {
   margin: 0;
+  max-width: 100%;
   font-size: clamp(62px, 11vw, 176px);
   font-weight: 700;
   line-height: 0.84;
@@ -200,7 +201,7 @@ em {
 .al_index_hero_cn {
   position: absolute;
   top: 2px;
-  right: clamp(8px, 3.6vw, 42px);
+  right: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -215,6 +216,7 @@ em {
   color: rgba(248,250,255,0.96);
   text-shadow: 0 0 26px rgba(246,248,251,0.24), 0 0 2px rgba(246,248,251,0.6);
   transform: translateY(0);
+  z-index: 2;
 }
 .al_index_hero_cn span {
   transition: transform 0.6s ease, opacity 0.6s ease, text-shadow 0.6s ease;
@@ -244,6 +246,7 @@ em {
   }
   .al_index_hero {
     width: calc(100vw - 36px);
+    padding-right: 4px;
   }
   .al_index_hero_cn {
     position: static;
