@@ -239,7 +239,7 @@ em {
 .al_index_hero_meta {
   margin: 26px 0 0;
   font-family: "Newsreader", "Times New Roman", serif;
-  font-size: 18px;
+  font-size: clamp(20px, 1.8vw, 28px);
   letter-spacing: 0.04em;
   text-transform: none;
   color: rgba(246,248,251,0.82);
