@@ -290,12 +290,13 @@ em {
 }
 .al_main_container::before {
   background-image: radial-gradient(circle at 8% 16%, rgba(152,120,208,0.28) 0, rgba(152,120,208,0.22) 2.8px, transparent 8px), radial-gradient(circle at 8% 16%, rgba(255,255,255,0.96) 0 1px, transparent 2px), radial-gradient(circle at 16% 31%, rgba(152,120,208,0.16) 0, rgba(152,120,208,0.12) 2.2px, transparent 6.5px), radial-gradient(circle at 16% 31%, rgba(255,255,255,0.64) 0 0.78px, transparent 1.6px), radial-gradient(circle at 28% 22%, rgba(152,120,208,0.24) 0, rgba(152,120,208,0.18) 2.6px, transparent 7.8px), radial-gradient(circle at 28% 22%, rgba(255,255,255,0.74) 0 0.9px, transparent 1.8px), radial-gradient(circle at 43% 14%, rgba(152,120,208,0.26) 0, rgba(152,120,208,0.2) 2.8px, transparent 8.6px), radial-gradient(circle at 43% 14%, rgba(255,255,255,0.8) 0 1px, transparent 2px), radial-gradient(circle at 58% 24%, rgba(152,120,208,0.2) 0, rgba(152,120,208,0.15) 2.4px, transparent 7px), radial-gradient(circle at 58% 24%, rgba(255,255,255,0.7) 0 0.86px, transparent 1.72px), radial-gradient(circle at 68% 62%, rgba(152,120,208,0.28) 0, rgba(152,120,208,0.22) 3px, transparent 9px), radial-gradient(circle at 68% 62%, rgba(255,255,255,0.84) 0 1px, transparent 2px), radial-gradient(circle at 79% 18%, rgba(152,120,208,0.18) 0, rgba(152,120,208,0.14) 2.3px, transparent 6.8px), radial-gradient(circle at 79% 18%, rgba(255,255,255,0.66) 0 0.8px, transparent 1.65px), radial-gradient(circle at 88% 36%, rgba(152,120,208,0.24) 0, rgba(152,120,208,0.18) 2.6px, transparent 7.8px), radial-gradient(circle at 88% 36%, rgba(255,255,255,0.74) 0 0.9px, transparent 1.8px), radial-gradient(circle at 94% 56%, rgba(152,120,208,0.2) 0, rgba(152,120,208,0.15) 2.4px, transparent 7px), radial-gradient(circle at 94% 56%, rgba(255,255,255,0.7) 0 0.86px, transparent 1.72px), radial-gradient(circle at 11% 72%, rgba(152,120,208,0.2) 0, rgba(152,120,208,0.15) 2.4px, transparent 7px), radial-gradient(circle at 11% 72%, rgba(255,255,255,0.7) 0 0.86px, transparent 1.72px), radial-gradient(circle at 24% 86%, rgba(152,120,208,0.24) 0, rgba(152,120,208,0.18) 2.6px, transparent 7.8px), radial-gradient(circle at 24% 86%, rgba(255,255,255,0.74) 0 0.9px, transparent 1.8px), radial-gradient(circle at 38% 77%, rgba(152,120,208,0.18) 0, rgba(152,120,208,0.14) 2.3px, transparent 6.8px), radial-gradient(circle at 38% 77%, rgba(255,255,255,0.66) 0 0.8px, transparent 1.65px), radial-gradient(circle at 52% 92%, rgba(152,120,208,0.26) 0, rgba(152,120,208,0.2) 2.8px, transparent 8.6px), radial-gradient(circle at 52% 92%, rgba(255,255,255,0.8) 0 1px, transparent 2px), radial-gradient(circle at 68% 81%, rgba(152,120,208,0.2) 0, rgba(152,120,208,0.15) 2.4px, transparent 7px), radial-gradient(circle at 68% 81%, rgba(255,255,255,0.7) 0 0.86px, transparent 1.72px), radial-gradient(circle at 83% 89%, rgba(152,120,208,0.24) 0, rgba(152,120,208,0.18) 2.6px, transparent 7.8px), radial-gradient(circle at 83% 89%, rgba(255,255,255,0.74) 0 0.9px, transparent 1.8px), radial-gradient(circle at 95% 74%, rgba(152,120,208,0.18) 0, rgba(152,120,208,0.14) 2.3px, transparent 6.8px), radial-gradient(circle at 95% 74%, rgba(255,255,255,0.66) 0 0.8px, transparent 1.65px), radial-gradient(circle at 14% 94%, rgba(255,255,255,0.74) 0 0.88px, transparent 1.7px), radial-gradient(circle at 49% 97%, rgba(255,255,255,0.8) 0 0.95px, transparent 1.8px), radial-gradient(circle at 78% 95%, rgba(255,255,255,0.72) 0 0.86px, transparent 1.72px);
-  background-size: 100% 100%;
+  inset: -10%;
+  background-size: 120% 120%;
   background-repeat: no-repeat;
-  background-position: 0 0;
-  will-change: background-position, opacity;
+  background-position: 50% 50%;
+  will-change: transform, opacity;
   opacity: 0.88;
-  animation: al_stars_twinkling 9s ease-in-out infinite alternate, al_stars_drift_a 38s linear infinite;
+  animation: al_stars_twinkling 6s ease-in-out infinite alternate, al_stars_drift_a 22s linear infinite;
 }
 .al_main_container::after {
   content: none;
@@ -303,11 +304,6 @@ em {
 .al_main_container > * {
   position: relative;
   z-index: 1;
-}
-@media (prefers-reduced-motion: reduce) {
-  .al_main_container::before {
-    animation: none;
-  }
 }
 @media screen and (max-width: 768px) {
   .al_main_container::after {
@@ -394,34 +390,34 @@ em {
 }
 @-moz-keyframes al_stars_drift_a {
   0% {
-    background-position: 0 0;
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    background-position: 20% 14%;
+    transform: translate3d(-9%, -6%, 0);
   }
 }
 @-webkit-keyframes al_stars_drift_a {
   0% {
-    background-position: 0 0;
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    background-position: 20% 14%;
+    transform: translate3d(-9%, -6%, 0);
   }
 }
 @-o-keyframes al_stars_drift_a {
   0% {
-    background-position: 0 0;
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    background-position: 20% 14%;
+    transform: translate3d(-9%, -6%, 0);
   }
 }
 @keyframes al_stars_drift_a {
   0% {
-    background-position: 0 0;
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    background-position: 20% 14%;
+    transform: translate3d(-9%, -6%, 0);
   }
 }
 .al_index_container {
